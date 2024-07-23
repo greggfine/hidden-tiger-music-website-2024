@@ -1,5 +1,3 @@
-@import "colors";
-@import "fonts";
 html,
 body {
   padding: 0;
@@ -52,87 +50,217 @@ i {
 i:hover {
   cursor: pointer;
 }
-@import "../styles/mixins";
-
-.aboutBioImgContainer {
-  max-width: 700px;
-  margin: auto;
-  box-shadow: -1px 3px 7px 3px #626b62;
-}
-
-.aboutBioImg {
-  z-index: 0;
-}
-.about {
-  background: url("/images_about/guitar-g7e1f84742_1920__compressed.jpg");
+/*  */
+.Bio {
+  background-image: url("../../assets/images/sincerely-media-FPrniQ84dEk-unsplash.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
-  padding: 11px;
-  background-color: rgba(0, 0, 0, 0.15);
-  padding-bottom: 120px !important;
-  @media (min-width: 1200px) {
-    padding: 40px;
-  }
+  background-position: 0px 40%;
+  margin-top: 40px;
+}
+.BioContact {
+  font-weight: 700;
+  color: #444;
+}
+.BioContact:hover {
+  color: #000;
+}
+.BioContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 80px;
+  overflow: hidden;
+}
+.BioFirstParagraph {
+  padding-top: 120px;
+}
+.BioGreggImg {
+  width: calc(500px / 3.4);
+  max-width: calc(500px / 3.4);
+  height: calc(375px / 3.4);
+  box-shadow: 6px 17px 19px 11px #ccc;
+  order: 0;
+  flex-basis: 25%;
+  transform: rotate(20deg) translateX(130px) translateY(100px);
+}
+.BioSectionHeading {
+  color: #5a6930;
+  font-weight: 900;
+  font-size: 2rem;
+  margin: 5px;
+}
+.BioSectionHeadingBorders {
+  width: 125px;
+  height: 2px;
+  background-color: #000;
+}
+.BioText {
+  max-width: 350px;
+  min-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  order: 1;
+  flex-basis: 50%;
+  font-size: 1.1rem;
+  padding-left: 4%;
+  padding-right: 4%;
+}
+.BioTextStrong {
+  font-weight: 800;
+  color: #444;
+}
+.BioTextCompany {
+  font-weight: 900;
+  color: #000;
+}
+.BioTigerImg {
+  order: 2;
+  top: 0;
+  width: calc(300px / 2.5);
+  max-width: calc(300px / 2.5);
+  height: calc(544px / 2.5);
+  filter: drop-shadow(10px 10px 4px #ccc);
+  flex-basis: 25%;
+  transform: rotate(-25deg) translateX(-100px) translateY(-50px);
+}
+/*  */
 
-  &__bodyText {
-    @include section-spacing;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-  }
+.Credits {
+  max-width: 300px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.CreditsText {
+  font-style: italic;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  color: #505251;
+}
 
-  &__leaf {
-    width: 60px;
-    filter: saturate(0) brightness(180%);
-    position: absolute;
-    top: -46px;
-    left: -60px;
-    transform: rotate(40deg);
-    z-index: 100;
-  }
-  &__bio {
-    max-width: 99%;
-    margin: auto;
-    color: #fff;
-    color: black;
-    background-color: rgba(255, 255, 255, 0.85);
-    border-radius: 16px;
-    padding: 2em;
-    font-size: 1.15rem;
-    line-height: 1.15;
-    text-indent: 10px;
-    @include header-spacing;
+.HeroContainer {
+  background-image: url("../../assets/images/sincerely-media-FPrniQ84dEk-unsplash.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: 0px 40%;
+  display: flex;
+  flex-direction: column;
+}
+.HeroContainerLottie {
+  width: 175px;
+  padding-bottom: 20px;
+}
+.HeroContainerVideo {
+  width: 100%;
+  height: 400px;
+}
 
-    @media (min-width: 768px) {
-      max-width: 95%;
-      font-size: 1.45rem;
-    }
-    @media (min-width: 1200px) {
-      max-width: 70%;
-      &::first-letter {
-        font-size: 1.8rem;
-        color: rgb(69, 72, 59);
-      }
-    }
-    &__highlightText {
-      color: var(--htMedGreen);
-      font-weight: 700;
-    }
-    &__imgContainer {
-      max-width: 700px;
-      margin: auto;
-      box-shadow: -1px 3px 7px 3px #626b62;
-      @include section-spacing;
-    }
-    &__img {
-      z-index: 0;
-    }
+.HeroContainerTextWrap {
+  padding: 40px 0;
+}
+
+.HeroContainerLogo {
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+.HeroContainerLogoText {
+  max-width: 300px;
+}
+
+.HeroContainerSubText {
+  font-weight: 400;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -10px;
+  margin-bottom: 0;
+  text-align: right;
+  padding-right: 40px;
+}
+
+@media (min-width: 720px) {
+  .HeroContainer {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
   }
-  &__profilePic {
-    text-align: center;
-    width: 15%;
-    margin: auto;
-    filter: saturate(0%);
-    position: relative;
+}
+
+@media (min-width: 960px) {
+  .BioContainer {
+    padding-top: 80px;
+    flex-direction: row;
+    overflow: initial;
+  }
+}
+
+@media (min-width: 1000px) {
+  .Credits {
+    max-width: 1600px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .HeroContainer {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+@media (min-width: 960px) {
+  .BioTigerImg {
+    width: calc(300px / 2);
+    max-width: calc(300px / 2);
+    height: calc(544px / 2);
+    order: 0;
+    transform: rotate(-25deg) translateX(40px);
+  }
+}
+
+@media (min-width: 450px) {
+  .BioText {
+    max-width: 450px;
+    min-width: 400px;
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+}
+@media (min-width: 960px) {
+  .BioText {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media (min-width: 450px) {
+  .BioGreggImg {
+    width: calc(500px / 2.9);
+    max-width: calc(500px / 2.9);
+    height: calc(375px / 2.9);
+    transform: rotate(20deg) translateX(150px) translateY(100px);
+  }
+}
+@media (min-width: 960px) {
+  .BioGreggImg {
+    width: calc(500px / 2.2);
+    max-width: calc(500px / 2.2);
+    height: calc(375px / 2.2);
+    order: 2;
+    transform: rotate(20deg) translateX(-35px) translateY(0px);
+  }
+}
+
+@media (min-width: 960px) {
+  .BioFirstParagraph {
+    padding-top: 20px;
   }
 }
