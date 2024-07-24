@@ -264,3 +264,146 @@ i:hover {
     padding-top: 20px;
   }
 }
+/* ======================== */
+.FooterCredit {
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+  max-width: 130px;
+  text-align: center;
+  position: relative;
+}
+.FooterCreditCompany {
+  color: #0e0719;
+  font-weight: 600;
+}
+.FooterScrollUpWrapper {
+  position: relative;
+  top: 40px;
+}
+.FooterScrollUp {
+  width: 40px;
+  border-radius: 50%;
+  background-color: #f1f2e6;
+  transform: rotate(270deg);
+  transition: all 400ms;
+}
+.FooterScrollUp:hover {
+  cursor: pointer;
+  transform: rotate(270deg) scale(1.15);
+}
+.FooterImage {
+  width: 90%;
+}
+.FooterCircleDecoration,
+.FooterCircleDecoration2 {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: #01e471;
+  position: absolute;
+  top: 44%;
+  left: 70%;
+}
+.FooterCircleDecoration2 {
+  width: 1.2rem;
+  height: 1.2rem;
+  top: 51%;
+  left: 80%;
+}
+.FooterBox {
+  border: 8px solid #5a6930;
+  border-right: none;
+  opacity: 0.4;
+  width: 237px;
+  width: 337px;
+  height: 120px;
+  position: absolute;
+  top: -40px;
+  left: -60px;
+  transform: rotate3d(1.9, -0.8, -0.7, -1turn);
+  transform: rotate3d(2.4, -0.9, -0.7, -3.3turn);
+}
+.FooterLogoWrapper {
+  position: relative;
+  width: 200px;
+  margin: 0 auto 0px;
+  max-width: 250px;
+}
+.FooterInner {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+}
+.FooterSocial {
+  transform: translateY(12px);
+}
+.FooterSocial i {
+  font-size: 1.7rem;
+  margin-right: 20px;
+}
+.FooterSocialLink {
+  background-color: #fff;
+  transition: color 500ms;
+}
+.FooterSocialLink:hover {
+  color: #9eaf3f;
+}
+.FooterCopyright {
+  font-size: 0.85rem;
+  max-width: 200px;
+  text-align: center;
+}
+.FooterHeader {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-top: 60px;
+}
+.Footer {
+  color: #5a6930;
+  text-align: center;
+  padding: 100px;
+  position: relative;
+}
+
+@media (min-width: 960px) {
+  .FooterCircleDecoration {
+    top: 40%;
+    left: 65%;
+  }
+  .FooterCircleDecoration2 {
+    top: 46%;
+    left: 73%;
+  }
+  .FooterHeader {
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+  }
+  .FooterInner {
+    border-top: 1px solid #65587a;
+    text-align: left;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: baseline;
+  }
+  .FooterLogoWrapper {
+    width: 400px;
+  }
+  .FooterSocial i {
+    font-size: 2rem;
+    margin-right: 30px;
+  }
+  .FooterCredit {
+    left: -20px;
+  }
+  .FooterCopyright {
+    text-align: left;
+  }
+  .FooterImage {
+    width: 70%;
+  }
+  .FooterScrollUp {
+    width: 50px;
+  }
+}
