@@ -25,12 +25,83 @@
       crossorigin="anonymous"
     />
 
-    <!-- build:css assets/styles/styles.css -->
+    <!-- build:css assets/styles/css -->
     <link rel="stylesheet" href="temp/styles/styles.css" />
     <!-- endbuild -->
   </head>
 
   <body>
+    <header
+        class="siteHeaderInit"
+  >
+    <div
+      class="siteHeaderMenuIconCloseX"`
+      id="menu-icon"
+      onClick={handleClick}
+    >
+      <div class="siteHeaderMenuIconMiddle"></div>
+    </div>
+
+    <div
+      id="side-menu"
+      class= "sideNav"
+    >
+      <ul class="sideNavListItems">
+        <Link href="/">
+          <a class="siteHeaderListItem" onClick={handleClick}>
+            Home
+          </a>
+        </Link>
+        <Link href="/contact">
+          <a class="siteHeaderListItem" onClick={handleClick}>
+            Contact
+          </a>
+        </Link>
+      </ul>
+    </div>
+    <div>
+      <nav class="siteHeaderNav">
+        <ul class="siteHeaderNavList">
+          <div class="siteHeaderBrandWrapper">
+            <Link href="/">
+              <div
+                    class="siteHeaderBrandNameInit" 
+              >
+                <img
+                  class="siteHeaderLogo"
+                  src="assets/images/hidden-tiger-music_logo_distressed_comp.png"
+                  alt=""
+                  width="200"
+                  height="100"
+                />
+              </div>
+            </Link>
+          </div>
+          <div class="siteHeaderListItemWrapper">
+            <li>
+              <Link href="/">
+                <a
+                    class="siteHeaderListItem"
+                >
+                  Home
+                </a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/contact">
+                <a
+                    class="siteHeaderListItem"
+                >
+                  Contact
+                </a>
+              </Link>
+            </li>
+          </div>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!-- END HEADER -->
     <section class="HeroContainer" id="header-section">
       <!-- HERO -->
       <div class="HeroContainerTextWrap">
@@ -137,7 +208,7 @@
             class="FooterSocialLink"
             rel="noopener noreferrer"
           >
-            <i className="fa fa-twitter"></i>
+            <i class="fa fa-twitter"></i>
           </a>
           <a
             href="https://www.instagram.com/greggfineguitar/"
@@ -159,5 +230,6 @@
       </div>
     </footer>
     <!-- END FOOTER -->
+    <script src="./temp/scripts/main.js"></script>
   </body>
 </html>
