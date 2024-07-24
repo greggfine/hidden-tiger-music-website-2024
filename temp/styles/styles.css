@@ -1,3 +1,18 @@
+:root {
+  --htGreen: #9eaf3f;
+  --htMedGreen: #6d7c37;
+  --htDarkGreen: #5a6930;
+  --pesto: #6a7a38;
+  --springWood: #f1f2e6;
+  --pineGlade: #b9c289;
+  --gimblet: #acbc71;
+  --analog1: #7a6938;
+  --analog2: #497a38;
+  --triad1: #7a386a;
+  --triad2: #386a7a;
+  --complimentary1: #48387a;
+  --triad1Compliment: #9d4888;
+}
 html,
 body {
   padding: 0;
@@ -405,5 +420,300 @@ i:hover {
   }
   .FooterScrollUp {
     width: 50px;
+  }
+}
+
+/* ================ */
+.siteHeaderInit {
+  position: relative;
+}
+.siteHeaderInit a:hover {
+  color: var(--htMedGreen);
+}
+.siteHeaderLogo {
+  visibility: hidden;
+  @media (min-width: 960px) {
+    visibility: visible;
+    max-width: 168px;
+    max-width: 200px;
+    border: 5px double #000;
+    border-radius: 50%;
+    padding: 5px;
+  }
+}
+.siteHeaderListItem {
+  position: relative;
+  transition: color 500ms;
+  letter-spacing: 1.3px;
+  font-size: 1.25rem;
+
+  &__active {
+    color: var(--analog1);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 0.2rem;
+    transition: transform 0.2s;
+    transform: scaleX(0);
+    transform-origin: left top;
+  }
+
+  &:hover::after {
+    transform: scaleX(1);
+  }
+  @media (min-width: 960px) {
+    &:hover {
+      text-decoration: none;
+    }
+    &:hover::after {
+      background-color: var(--htMedGreen);
+    }
+  }
+}
+.siteHeaderListItemWrapper {
+  display: flex;
+  justify-content: space-around;
+  width: 300px;
+}
+.siteHeaderBrandWrapper:hover {
+  cursor: pointer;
+}
+.siteHeaderBrand-wrapperLine {
+  height: 3px;
+  width: 40px;
+  background-color: green;
+  transform: rotate(90deg);
+  position: relative;
+  top: 27px;
+  left: -26px;
+}
+.siteHeaderBrandNameInit {
+  color: var(--htGreen);
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+  padding: 10px 0 10px;
+}
+.siteHeaderBrandName {
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 10px 0 10px;
+  margin: 0;
+  font-family: Arial;
+  letter-spacing: 2px;
+  line-height: 1;
+
+  img {
+    @media (min-width: 960px) {
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+  @media (max-width: 960px) {
+    font-size: 1rem;
+    visibility: visible;
+  }
+}
+.siteHeaderBrand {
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  display: none;
+}
+.siteHeaderMenuIcon {
+  position: absolute;
+  right: 50px;
+  width: 25px;
+  height: 18px;
+  top: 34%;
+  transition: transform 0.15s ease-in;
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+
+  &__closeX {
+    &::before {
+      transform: rotate(45deg);
+    }
+    .siteHeader__menuIcon__middle {
+      opacity: 0;
+    }
+    &::after {
+      transform: rotate(-45deg) translateY(1px);
+    }
+  }
+
+  &::before {
+    content: "";
+    background-color: var(--gimblet);
+    position: absolute;
+    width: 25px;
+    height: 2px;
+    top: 0;
+    transform-origin: 0 0;
+    transition: 300ms ease-out;
+  }
+
+  &__middle {
+    background-color: var(--gimblet);
+    position: absolute;
+    width: 25px;
+    height: 2px;
+    top: 8px;
+    transition: 300ms ease-out;
+  }
+
+  &::after {
+    content: "";
+    background-color: var(--gimblet);
+    position: absolute;
+    width: 25px;
+    height: 2px;
+    bottom: 0;
+    transform-origin: 0 100%;
+    transition: 300ms ease-out;
+  }
+
+  @media (min-width: 960px) {
+    display: none;
+  }
+}
+.siteHeaderNav {
+  height: 50px;
+  @media (min-width: 960px) {
+    height: initial;
+  }
+}
+.siteHeaderNav-active {
+  text-decoration: underline;
+}
+.siteHeaderNavList {
+  margin: auto;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0;
+  max-width: 90%;
+}
+.siteHeaderNavListItem {
+  list-style-type: none;
+}
+.siteHeader {
+  transition: all 0.65s ease-in-out;
+  background-color: var(--triad2);
+  background-color: rgb(6, 1, 12);
+  margin-bottom: 20px;
+  position: sticky;
+  z-index: 600;
+  top: 0;
+  border-bottom: 2px solid #e7e7e7c7;
+
+  nav ul li a,
+  li {
+    color: rgb(223 228 191);
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+}
+
+.sideNav {
+  background-color: #000;
+  opacity: 0.97;
+  width: 0;
+  height: 100%;
+  position: fixed;
+  top: 48px;
+  right: 0px;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.4s;
+  z-index: 600;
+
+  @media (min-width: 960px) {
+    display: none;
+  }
+}
+
+.sideNav a {
+  padding: 10px 10px 10px 30px;
+  text-decoration: none;
+  font-size: 22px;
+  color: #eee;
+  display: block;
+  transition: 0.3s;
+
+  &:hover {
+    color: #fff;
+  }
+}
+
+.openSideMenu {
+  width: 300px;
+  width: 100%;
+}
+
+.btnClose {
+  color: #000;
+  background-color: #fff;
+  position: absolute;
+  top: 60px;
+  left: 15px;
+  font-size: 36px;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.sideNavListItems {
+  padding: -1;
+  width: 50%;
+  margin-left: 50%;
+  position: relative;
+  top: -40px;
+}
+.sideNavListItems a {
+  text-align: right;
+  border-bottom: 3px solid #fff;
+}
+.sideNavListItems:hover {
+  border-bottom: 3px solid var(--htGreen);
+}
+
+.svg-wrapper {
+  position: relative;
+  top: 0%;
+  transform: translateY(-150%);
+  margin: 0 auto;
+  width: 320px;
+  transform: rotate(-3deg);
+}
+.shape {
+  stroke-dasharray: 140 540;
+  stroke-dashoffset: -474;
+  stroke-width: 8px;
+  fill: transparent;
+  stroke: green;
+  transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s;
+  transform: translateY(-60px);
+}
+
+@media (min-width: 960px) {
+  .siteHeaderNavList {
+    justify-content: space-between;
+  }
+}
+@media (max-width: 960px) {
+  .siteHeaderNavList {
+    visibility: hidden;
   }
 }
