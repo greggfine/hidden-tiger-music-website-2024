@@ -30,5 +30,6 @@ function smoothScroll(target, duration) {
 
 var scrollBackToTop = document.querySelector("#scrollBackToTop");
 scrollBackToTop.addEventListener("click", function () {
+  console.log("CLICK");
   smoothScroll("#header-section", 1000);
 });
