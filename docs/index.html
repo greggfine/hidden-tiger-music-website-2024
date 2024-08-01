@@ -27,6 +27,8 @@
     <!-- build:css assets/styles/css -->
     <link rel="stylesheet" href="temp/styles/styles.css" />
     <!-- endbuild -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.9.6/lottie.min.js"></script>
+
   </head>
 
   <body>
@@ -76,6 +78,20 @@
               </div>
             </Link>
           </div>
+          <!-- <div>
+            <Player
+              autoplay
+              loop
+              src="assets/images/lottie/tiger6.json"
+              className="HeroContainerLottie"
+            >
+              <Controls
+                visible={false}
+                buttons={["play", "repeat", "frame", "debug"]}
+              />
+            </Player>
+          </div> -->
+
           <!-- <div class="siteHeaderListItemWrapper">
             <li>
               <Link href="/">
@@ -111,6 +127,7 @@
         />
         <h1 class="HeroContainerSubText">Music + Sound for Media</h1>
       </div>
+          <div id="lottie-container" class="HeroContainerLottie"></div>
     </section>
 
     <!-- END HERO -->
@@ -301,5 +318,16 @@ scrollBackToTop.addEventListener("click", function () {
   smoothScroll("#header-section", 1000);
 });
 	</script
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.9.6/lottie.min.js"></script> -->
+  <script>
+    var animation = lottie.loadAnimation({
+      container: document.getElementById('lottie-container'), // the dom element that will contain the animation
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: 'assets/images/lottie/tiger6.json' // the path to the animation json
+    });
+  </script>
+
   </body>
 </html>
